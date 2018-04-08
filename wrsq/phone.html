@@ -1,0 +1,204 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>手机网站</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            list-style: none;
+            font-size: 14px;
+            font-family: "微软雅黑";
+            text-align: center;
+            color: #fff;
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        body {
+            font-size: 62.5%;
+            font-family: "Microsoft YaHei", Arial;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+
+        @media screen and (max-width:640px) {
+            #view_box {
+                background: url(./images/background_download@2x.png) no-repeat center;
+                background-size: cover;
+                position: relative;
+            }
+            .iphoneX {
+                background: url(./images/iphoneX@2x.png) no-repeat center;
+                background-size: cover;
+                width: 30.3125%;
+                height: 40.1478%;
+                position: absolute;
+                left: 10%;
+                top: 23.5915%;
+            }
+            .QRcode {
+                background: url(./images/erweima@2x.png) no-repeat center;
+                background-size: cover;
+                width: 26.5625%;
+                height: 14.9647%;
+                position: absolute;
+                right: 14%;
+                top: 30%;
+            }
+            .iosDown {
+                background: url(./images/IOS_download@2x.png) no-repeat center;
+                background-size: cover;
+                width: 39.0625%;
+                height: 7.02987%;
+                position: absolute;
+                left: 6.25%;
+                bottom: 25%;
+                border-radius: 1.5%;
+            }
+            .azDown {
+                background: url(./images/Android_download@2x.png) no-repeat center;
+                background-size: cover;
+                width: 39.0625%;
+                height: 7.02987%;
+                position: absolute;
+                right: 6.25%;
+                bottom: 25%;
+                border-radius: 1.5%;
+                outline: none;
+            }
+        }
+
+        /*iphoneX*/
+
+        @media screen and (height:812px) {
+            #view_box {
+                background: url(./images/background_download@2x.png) no-repeat center;
+                background-size: cover;
+                position: relative;
+            }
+            .iphoneX {
+                background: url(./images/iphoneX@2x.png) no-repeat center;
+                background-size: cover;
+                width: 35.3125%;
+                height: 37.1478%;
+                position: absolute;
+                left: 10%;
+                top: 23.5915%;
+            }
+            .QRcode {
+                background: url(./images/erweima@2x.png) no-repeat center;
+                background-size: cover;
+                width: 32.5625%;
+                height: 14.9647%;
+                position: absolute;
+                right: 6%;
+                top: 30%;
+            }
+            .iosDown {
+                background: url(./images/IOS_download@2x.png) no-repeat center;
+                background-size: cover;
+                width: 39.0625%;
+                height: 7.02987%;
+                position: absolute;
+                left: 6.25%;
+                bottom: 25%;
+                border-radius: 1.5%;
+            }
+            .azDown {
+                background: url(./images/Android_download@2x.png) no-repeat center;
+                background-size: cover;
+                width: 39.0625%;
+                height: 7.02987%;
+                position: absolute;
+                right: 6.25%;
+                bottom: 25%;
+                border-radius: 1.5%;
+                outline: none;
+            }
+        }
+
+        /*平板*/
+
+        @media screen and (min-width:640px) and (max-width:1024px) {
+            #view_box {
+                background: url(./images/background_download@2x.png) no-repeat center;
+                background-size: cover;
+                position: relative;
+            }
+            .iphoneX {
+                background: url(./images/iphoneX@3x.png) no-repeat center;
+                background-size: cover;
+                width: 30.3125%;
+                height: 49.333%;
+                position: absolute;
+                left: 10%;
+                top: 15%;
+            }
+            .QRcode {
+                background: url(./images/erweima@3x.png) no-repeat center;
+                background-size: cover;
+                width: 26.5625%;
+                height: 20%;
+                position: absolute;
+                right: 14%;
+                top: 25%;
+            }
+            .iosDown {
+                background: url(./images/IOS_download@3x.png) no-repeat center;
+                background-size: cover;
+                width: 39.0625%;
+                height: 7.02987%;
+                position: absolute;
+                left: 6.25%;
+                bottom: 25%;
+                border-radius: 1.5%;
+            }
+            .azDown {
+                background: url(./images/Android_download@3x.png) no-repeat center;
+                background-size: cover;
+                width: 39.0625%;
+                height: 7.02987%;
+                position: absolute;
+                right: 6.25%;
+                bottom: 25%;
+                border-radius: 1.5%;
+                outline: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="view_box">
+        <div class="iphoneX"></div>
+        <div class="QRcode"></div>
+        <div class="iosDown btn"></div>
+        <div class="azDown btn"></div>
+    </div>
+</body>
+<script type="text/javascript">
+    var winHeigth = window.innerHeight;
+    var bgBox = document.getElementById('view_box');
+    bgBox.style.height = winHeigth + "px";
+    var downBtn = document.getElementsByClassName('btn');
+    downBtn[0].onclick = function () {
+        window.location.href = "https://www.pgyer.com/wrsq";
+    }
+    downBtn[1].onclick = function () {
+        window.location.href = "https://www.pgyer.com/Z1kB";
+    }
+</script>
+
+</html>
